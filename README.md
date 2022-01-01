@@ -2,6 +2,8 @@
 
 Welcome to the `Wex Framwework`, a lightweight, portable, idiomatic, fast and scalable web framework for `modern C++` 
 
+![Wex status](https://github.com/Pyzyryab/Wex-Framework/actions/workflows/main.yml/badge.svg?event=push)
+
 ## Motivation behind the project
 
 Take care that this it's not designed like to be a production ready project. It's a posibility, yes, but the foundation of this work it's to learn about five main things:
