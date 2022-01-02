@@ -2,7 +2,7 @@
 
 Welcome to the `Wex Framwework`, a lightweight, portable, idiomatic, fast and scalable web framework for `modern C++` 
 
-![Wex status](https://github.com/Pyzyryab/Wex-Framework/actions/workflows/main.yml/badge.svg?event=push)
+![Wex build and test](https://github.com/Pyzyryab/Wex-Framework/actions/workflows/cmake.yml/badge.svg?event=push)
 
 ## Motivation behind the project
 
