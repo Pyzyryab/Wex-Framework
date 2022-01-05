@@ -5,8 +5,8 @@ cmake_minimum_required(
 set(This WexTests)
 
 set(Sources
-    ./InitialWexTests.cpp
-    ./FixtureWexTestExample.cpp
+    ./Examples/InitialWexTests.cpp
+    ./Examples/FixtureWexTestExample.cpp
 )
 
 add_executable(${This} ${Sources})

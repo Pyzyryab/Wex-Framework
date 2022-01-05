@@ -13,8 +13,7 @@
  * behaviour that fit your needs, like the starting configuration
  * or to automatically delete allocated memory
  */
-struct FixtureWexTestsExample
-    : public::testing::Test {
+struct FixtureWexTestsExample : public::testing::Test {
 
     // Let's assume that we have some complicated member, like a raw pointer. Will use a basic datatype for simplicity
     int *x;
