@@ -1,6 +1,8 @@
 # Editor 's folders stuff
 .vscode/
+.vs/
 .idea/
 
 # The project's build output directory
 build-vscode/
+out/

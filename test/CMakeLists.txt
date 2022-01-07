@@ -4,30 +4,46 @@ cmake_minimum_required(
 
 set(This WexTests)
 
-set(Sources
-    ./Examples/InitialWexTests.cpp
-    ./Examples/FixtureWexTestExample.cpp
-)
+project(${This} CXX) # The name of the project and the languages used in
 
-add_executable(${This} ${Sources})
+set(CMAKE_CXX_STANDARD 20) # This project will be completly build only using C++ 20
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(FetchContent)
 FetchContent_Declare(
     googletest
-    URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+    URL https://github.com/google/googletest/archive/main.zip
 )
 
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-
 FetchContent_MakeAvailable(googletest)
+
+file(
+  GLOB_RECURSE
+    Sources
+        ./Examples/**.cpp
+        ./Wex/**.cpp
+    )
+
+add_executable(${This} ${Sources})
 
 target_link_libraries(${This} PUBLIC
     gtest_main
     Wex
 )
 
+
+add_module(mod ${PROJECT_SOURCE_DIR}/include/Wex/**.ixx)
+
+
 add_test(
     NAME ${This}
-    COMMAND ${This}
+    COMMAND Wex
+)
+
+add_compile_options(
+    -DGTEST_HAS_PTHREAD=1
 )
