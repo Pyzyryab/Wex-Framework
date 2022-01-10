@@ -37,7 +37,7 @@ file(
     Headers
       ./include/Wex/**.ixx
     Sources
-      src/**.cpp
+      src/Wex/**.cpp
 )
 
 add_library(${This} STATIC ${Headers} ${Sources})
