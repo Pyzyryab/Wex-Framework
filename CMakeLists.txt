@@ -17,7 +17,7 @@ function(add_module name)
       COMMAND
         ${CMAKE_CXX_COMPILER}
         /std:c++latest
-        /experimental:module
+        # /experimental:module
         /c
         /EHsc
         /MDd
@@ -51,7 +51,7 @@ target_compile_options(${This}
   BEFORE
   PUBLIC
   /std:c++latest
-  /experimental:module
+  # /experimental:module
   # /ifcSearchDir ${STD_MODULES_DIR}
   /reference my_module=${PREBUILT_MODULE_DIR}/my_module.ifc 
   /EHsc
