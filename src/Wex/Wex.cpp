@@ -1,6 +1,6 @@
-module Wex;
-
-import std.core;
+// module Wex;
+#include <iostream>
+export module Wex;
 
 int foo() {
     std::cout << "Hello from the C++20 modules feature! :)" << std::endl; 

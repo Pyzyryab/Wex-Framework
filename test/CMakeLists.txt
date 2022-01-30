@@ -4,12 +4,15 @@ cmake_minimum_required(
 
 set(This WexTests)
 
-project(${This} CXX) # The name of the project and the languages used in
+project(${This}) # The name of the project and the languages used in
 
 set(CMAKE_CXX_STANDARD 20) # This project will be completly build only using C++ 20
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+# set(CMAKE_CXX_COMPILER clang++)
+
+add_compile_options(-stdlib=libc++)
 
 include(FetchContent)
 FetchContent_Declare(

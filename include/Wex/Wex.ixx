@@ -14,6 +14,8 @@
 /// Disabling specific compiler warnings
 #pragma warning( disable: 5050 ) 
 
+#include <iostream>
+
 export module Wex;
 
 export {
